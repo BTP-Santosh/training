@@ -1,0 +1,44 @@
+
+### Read Single
+GET https://localhost:4004/odata/v4/catalog/trainers
+
+### Read All 
+GET https://localhost:4004/odata/v4/catalog/trainers
+
+### POST a record
+POST https://localhost:4004/odata/v4/catalog/trainers
+Content-Type: application/json
+
+{
+    "cid" : "010",
+    "name" : "BTP-BootCamp",
+    "skil" : "CAPM",
+    "trainer" : "Shasjank",
+    "location" : "Virtual",
+    "room" : "zoom",
+    "trainee" : "Santosh",
+    "duration": "2"
+}
+
+### Put Request
+PUT https://localhost:4004/odata/v4/catalog/trainers
+
+{
+        "trainee" : "Santosh"
+}
+
+### Patch Request
+PATCH https://localhost:4004/odata/v4/catalog/trainers
+
+{
+        "duration" : "8"
+}
+
+### Action Calling
+POST  https://localhost:4004/odata/v4/catalog/purgedb
+Content-Type: application/json
+{ 
+        "ProductID" : "1"
+}
+
+
