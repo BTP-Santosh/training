@@ -1,4 +1,4 @@
-using {test as db} from '../db/src/data-model';
+using {test as db} from '../db/data/data-model';
 
 service CatalogService {
        

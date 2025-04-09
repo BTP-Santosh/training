@@ -27,7 +27,7 @@
     },
     "requires": {
       "db": "hana",
-      "auth": "xsuaa",
+      "auth": "dummy",
       "training_product": {
         "kind": "odata-v2",
         "model": "srv/external/training-product"
