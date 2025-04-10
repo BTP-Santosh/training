@@ -27,9 +27,8 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      - name: btp-training-db
-      - name: btp-training-auth
       - name: btp-training-destination
+      - name: btp-training-db
 
   - name: btp-training-db-deployer
     type: hdb
@@ -40,22 +39,13 @@ modules:
       - name: btp-training-db
 
 resources:
-  - name: btp-training-db
-    type: com.sap.xs.hdi-container
-    parameters:
-      service: hana
-      service-plan: hdi-shared
-  - name: btp-training-auth
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: xsuaa
-      service-plan: application
-      path: ./xs-security.json
-      config:
-        xsappname: btp-training-${org}-${space}
-        tenant-mode: dedicated
   - name: btp-training-destination
     type: org.cloudfoundry.managed-service
     parameters:
       service: destination
       service-plan: lite
+  - name: btp-training-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared

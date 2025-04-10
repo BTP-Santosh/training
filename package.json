@@ -9,7 +9,8 @@
     "@sap/cds": "^8",
     "express": "^4",
     "@cap-js/hana": "^1",
-    "@sap/xssec": "^4"
+    "@sap/xssec": "^4",
+    "@sap/hdi-deploy": "^4"
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.8.0",
